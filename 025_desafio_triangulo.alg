@@ -14,17 +14,9 @@ inicio
       leia(b)
       Escreva("Digite a terceira dimensão: ")
       leia(c)
-             Se (a + b > c) entao
-                Se (b + c > a) entao
-                   Se (a + c > b) entao
-                      Escreva("É possível formar um triângulo!")
-                   senao
-                      Escreva("Não é possível formar um triângulo!")
-                   FimSe
-                senao
-                     Escreva("Não é possível formar um triângulo!")
-                FimSe
+             Se (a + b > c) e (b + c > a) e (a + c > b) entao
+                Escreva("É possível formar um triângulo!")
              senao
-                  Escreva("Não é possível formar um triângulo!")
+                Escreva("Não é possível formar um triângulo!")
              FimSe
 fimalgoritmo
