@@ -8,10 +8,9 @@ algoritmo "060_maiosumalgoritmodenomessexoseidades"
 // e) Quantas mulheres tem menos de 18 anos
 var
    cont, nome, sexo, nomevelho, nomejovem: Caractere
-   idade, maisvelho, maisnova, a, somaidade, homens, mulheres, pessoas: Inteiro
+   idade, maisvelho, maisnova, somaidade, homens, mulheres, pessoas: Inteiro
    mediaidade: Real
 inicio
-      a <- 1
       Enquanto (cont <> "N") faca
          Escreva("Informe o Nome da pessoa: ")
          leia(nome)
@@ -27,12 +26,9 @@ inicio
          FimSe
 
          // mulher mais jovem (para garantir que a idade mais jovem será guardada)
-         Se (sexo = "F") entao
-            Enquanto (a < 2) faca
-               maisnova <- idade
-               nomejovem <- nome
-               a <- 2
-            FimEnquanto
+         Se (sexo = "F") e (maisnova = 0) entao
+            maisnova <- idade
+            nomejovem <- nome
          FimSe
          Se (sexo = "F") e (idade < maisnova) entao
             maisnova <- idade

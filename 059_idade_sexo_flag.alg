@@ -7,10 +7,9 @@ algoritmo "059_idade_sexo_flag"
 // d) qual é a média de idade entre os homens
 var
    cont, sexo: Caractere
-   idade, midade, h, fidade, sidade, a: Inteiro
+   idade, midade, h, fidade, sidade: Inteiro
    mediah: Real
 inicio
-      a <- 1
       Enquanto (cont <> "N") faca
          Escreva("Informe o sexo [M/F]: ")
          leia(sexo)
@@ -20,11 +19,8 @@ inicio
          Se (idade > midade) entao
             midade <- idade
          FimSe
-         Se (sexo = "F") entao
-            Enquanto (a < 2) faca
-               fidade <- idade
-               a <- 2
-            FimEnquanto
+         Se (sexo = "F") e (fidade = 0) entao
+            fidade <- idade
          FimSe
          Se (sexo = "F") e (idade < fidade) entao
             fidade <- idade
